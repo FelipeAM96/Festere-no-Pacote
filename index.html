@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festere no Pacote | Decorações Afetivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Chewy&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        festere: {
+                            purple: '#92BBD9', // Azul pastel (baseado nos balões da logo)
+                            yellow: '#F4C898', // Laranja/Amarelo pastel 
+                            pink: '#F2A1A5',   // Rosa pastel
+                            dark: '#6C4E46',   // Marrom fofo do saquinho (para textos)
+                            light: '#FEFAF6'   // Fundo off-white quentinho
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Chewy', 'cursive'], // Fonte divertida para títulos
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a better look */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #FEFAF6; }
+        ::-webkit-scrollbar-thumb { background: #92BBD9; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7AADD0; }
+        
+        .hero-pattern {
+            background-image: linear-gradient(rgba(254, 250, 246, 0.85), rgba(254, 250, 246, 0.95)), url('Tea for Three! A delicadeza da festinha da Ellie 🫖🎀Registros lindos enviados pela mamãe @luqu.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+    </style>
+</head>
+<body class="bg-festere-light text-gray-800 font-sans antialiased selection:bg-festere-yellow selection:text-festere-dark">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="image_b5bfaa.png" alt="Festere no Pacote Logo" class="w-16 h-16 object-contain transform hover:scale-105 transition">
+                    <span class="ml-3 font-display text-2xl text-festere-dark tracking-wide">Festere no Pacote</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#quem-somos" class="text-festere-dark hover:text-festere-purple font-semibold transition">Quem Somos</a>
+                    <a href="#produtos" class="text-festere-dark hover:text-festere-purple font-semibold transition">Produtos</a>
+                    <a href="#trabalhos" class="text-festere-dark hover:text-festere-purple font-semibold transition">Trabalhos</a>
+                    <a href="#contato" class="bg-festere-yellow text-festere-dark px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transform hover:-translate-y-0.5 transition shadow-md">Contato</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-festere-dark hover:text-festere-purple focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#quem-somos" class="block px-3 py-3 text-lg font-semibold text-festere-dark hover:bg-festere-light rounded-lg mobile-link">Quem Somos</a>
+                <a href="#produtos" class="block px-3 py-3 text-lg font-semibold text-festere-dark hover:bg-festere-light rounded-lg mobile-link">Produtos</a>
+                <a href="#trabalhos" class="block px-3 py-3 text-lg font-semibold text-festere-dark hover:bg-festere-light rounded-lg mobile-link">Trabalhos</a>
+                <a href="#contato" class="block px-3 py-3 mt-4 text-lg font-bold text-festere-dark bg-festere-yellow rounded-full mx-10 mobile-link">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sessão 1: Hero (Início) -->
+    <section id="inicio" class="relative pt-20 pb-32 flex items-center min-h-[90vh] hero-pattern overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-festere-light/90"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center z-10">
+            <div class="md:w-1/2 text-center md:text-left pt-12 md:pt-0">
+                <span class="inline-block py-1 px-3 rounded-full bg-festere-pink text-white font-semibold text-sm mb-4 animate-bounce">Feito à mão com amor 🤎</span>
+                <h1 class="text-5xl md:text-7xl font-display text-festere-dark mb-6 drop-shadow-sm leading-tight">
+                    A magia da sua festa <br> <span class="text-festere-pink">em um pacote!</span>
+                </h1>
+                <p class="text-xl text-festere-dark mb-8 font-medium max-w-lg mx-auto md:mx-0">
+                    Decorações lindas, manuais e personalizadas para festas infantis, eventos familiares e épocas comemorativas.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#trabalhos" class="bg-festere-pink text-white px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition shadow-xl hover:-translate-y-1">Ver Nossas Festas</a>
+                    <a href="https://www.instagram.com/festerenopacote/" target="_blank" class="bg-white text-festere-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition shadow-xl flex items-center justify-center gap-2 hover:-translate-y-1">
+                        <i data-lucide="instagram" class="w-5 h-5"></i> Instagram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center">
+                <!-- Imagem ilustrativa de produção manual (Graficosa) -->
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-festere-yellow blob-shape opacity-60 transform translate-x-4 translate-y-4"></div>
+                    <div class="absolute inset-0 bg-festere-purple blob-shape opacity-60 transform -translate-x-4 -translate-y-4" style="animation-delay: 2s;"></div>
+                    <img src="A delicadeza e autenticidade da festinha do Augusto 🚀 São tantos detalhes, que é impossível es.webp" alt="Mesa de festa espacial" class="absolute inset-0 w-full h-full object-cover blob-shape border-4 border-white shadow-2xl z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão 2: Quem Somos -->
+    <section id="quem-somos" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition duration-500">
+                        <img src="Tea for Three! A delicadeza da festinha da Ellie 🫖🎀Registros lindos enviados pela mamãe @luqu.webp" alt="Decoração de festa infantil" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Decorativo -->
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-festere-yellow rounded-full flex items-center justify-center shadow-lg z-10 animate-spin-slow" style="animation: spin 10s linear infinite;">
+                        <i data-lucide="sparkles" class="text-festere-dark w-10 h-10"></i>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h2 class="font-display text-4xl md:text-5xl text-festere-purple mb-6">Quem Somos</h2>
+                    <div class="w-20 h-2 bg-festere-pink rounded-full mb-8"></div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        A <strong class="text-festere-dark">Festere no Pacote</strong> nasceu da paixão por celebrar a vida de forma única e afetuosa. Somos especialistas em criar decorações que contam histórias.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Nosso trabalho é 100% focado em detalhes manuais e muito cuidado. Fazemos com que festas de crianças, reuniões familiares e épocas comemorativas (como Natal, Páscoa, etc.) se transformem em cenários de pura magia.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Não entregamos apenas balões e enfeites; entregamos uma <span class="bg-festere-yellow/30 px-2 rounded-md font-semibold text-festere-dark">experiência gráfica, colorida e cheia de amor</span>, pronta para criar as melhores memórias para a sua família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão 3: Produtos -->
+    <section id="produtos" class="py-24 bg-festere-light relative overflow-hidden">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-festere-pink/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-festere-purple/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-festere-dark mb-4">O que tem no pacote?</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Tudo o que você precisa para deixar seu evento incrível, prático e inesquecível.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-festere-pink transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-festere-pink/10 rounded-2xl flex items-center justify-center mb-6 text-festere-pink">
+                        <i data-lucide="party-popper" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-display text-2xl text-festere-dark mb-4">Festas Infantis</h3>
+                    <p class="text-gray-600 mb-6">Decorações lúdicas e temáticas, cheias de cores complementares e elementos manuais que encantam as crianças.</p>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-festere-purple transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-festere-purple/10 rounded-2xl flex items-center justify-center mb-6 text-festere-purple">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-display text-2xl text-festere-dark mb-4">Eventos Familiares</h3>
+                    <p class="text-gray-600 mb-6">Chás de bebê, batizados e aniversários. Criamos ambientes acolhedores e elegantes para celebrar com quem você ama.</p>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-festere-yellow transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-festere-yellow/20 rounded-2xl flex items-center justify-center mb-6 text-yellow-600">
+                        <i data-lucide="calendar-heart" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-display text-2xl text-festere-dark mb-4">Datas Comemorativas</h3>
+                    <p class="text-gray-600 mb-6">Páscoa, Natal, Dia das Crianças e muito mais. Kits e decorações sazonais para manter a tradição com muito estilo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão 4: Trabalhos -->
+    <section id="trabalhos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-festere-purple mb-4">Nossos Trabalhos</h2>
+                <p class="text-gray-600 text-lg">Um pedacinho do amor que entregamos em cada pacote.</p>
+            </div>
+
+            <!-- Grid de Fotos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Foto 1 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer">
+                    <img src="A delicadeza e autenticidade da festinha do Augusto 🚀 São tantos detalhes, que é impossível es.webp" alt="Trabalho 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Festa Tema Espaço</span>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer">
+                    <img src="Tea for Three! A delicadeza da festinha da Ellie 🫖🎀Registros lindos enviados pela mamãe @luqu.webp" alt="Trabalho 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Festa do Chá Delicada</span>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer">
+                    <img src="A delicadeza e autenticidade da festinha do Augusto 🚀 São tantos detalhes, que é impossível es (6).webp" alt="Trabalho 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Detalhes Especiais</span>
+                    </div>
+                </div>
+                <!-- Foto 4 (Oculta em telas pequenas para manter o layout bonito, opcional) -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer hidden lg:block">
+                    <img src="Tea for Three! A delicadeza da festinha da Ellie 🫖🎀Registros lindos enviados pela mamãe @luqu (1).webp" alt="Trabalho 4" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Momentos Únicos</span>
+                    </div>
+                </div>
+                <!-- Foto 5 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer hidden lg:block">
+                    <img src="A delicadeza e autenticidade da festinha do Augusto 🚀 São tantos detalhes, que é impossível es (2).webp" alt="Trabalho 5" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Papelaria Afetiva</span>
+                    </div>
+                </div>
+                <!-- Foto 6 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-md cursor-pointer hidden lg:block">
+                    <img src="A delicadeza e autenticidade da festinha do Augusto 🚀 São tantos detalhes, que é impossível es (3).webp" alt="Trabalho 6" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-festere-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-lg">Lembrancinhas Lindas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://www.instagram.com/festerenopacote/" target="_blank" class="inline-flex items-center gap-2 text-festere-purple font-semibold hover:text-festere-pink transition group">
+                    Ver mais no nosso Instagram 
+                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão 5: Contato (Footer) -->
+    <footer id="contato" class="bg-festere-dark text-white pt-16 pb-8 border-t-[10px] border-festere-pink">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl mb-6 text-festere-yellow">Vamos festejar juntos?</h2>
+            <p class="text-gray-300 mb-10 text-lg">Entre em contato para encomendar o seu pacote de alegria ou solicitar um orçamento.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                <!-- WhatsApp / Contato -->
+                <a href="#" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition w-full sm:w-auto justify-center">
+                    <i data-lucide="message-circle" class="w-6 h-6 text-green-400"></i>
+                    <span class="font-semibold">WhatsApp</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/festerenopacote/" target="_blank" class="flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 px-6 py-3 rounded-full transition shadow-lg w-full sm:w-auto justify-center">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                    <span class="font-semibold">@festerenopacote</span>
+                </a>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 mt-8 flex flex-col items-center">
+                <img src="image_b5bfaa.png" alt="Festere no Pacote Logo" class="w-20 h-20 object-contain mb-4 bg-white/10 rounded-full p-2">
+                <p class="text-sm text-gray-400">
+                    &copy; <span id="year"></span> Festere no Pacote. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Ano dinâmico no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar num link mobile
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Header Background on Scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.replace('bg-white/90', 'bg-white/95');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.replace('bg-white/95', 'bg-white/90');
+            }
+        });
+    </script>
+</body>
+</html>
